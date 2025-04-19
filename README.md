@@ -61,4 +61,27 @@ Test Loss: 1.8902
 I evaluated the best-performing model—based on validation accuracy—on the test dataset to assess its generalization performance. The final test accuracy achieved by this model was 34.17%.
 
 
-# DA6401_DL_Assignment2_Part_B
+# DA6401_DL_Assignment2_Part_B : Fine-Tuning a Pre-Trained Model (ResNet50)
+# Overview :
+In this section, I fine-tuned a pre-trained ResNet50 model using the iNaturalist dataset. The model was initialized with weights learned from ImageNet and then adapted to suit the specific number of categories present in the iNaturalist dataset.
+
+Training a deep neural network from scratch on a large dataset can be very resource-intensive, as it involves learning millions of parameters. Fine-tuning a model that has already been trained on a similar task helps speed up the process and often improves performance by leveraging learned features.
+
+# Fine-Tuning Strategies :
+My strategies are :
+* Freezing all layers except the final classification layer.
+* Freezing the initial k layers and fine-tuning the remaining ones.
+* Freezing the fully connected layers while training the convolutional layers.
+
+# Results :
+As part of the model fine-tuning process, I investigated the impact of freezing different proportions of the ResNet50 network on validation accuracy. The results are summarized below:
+
+* When 30% of the layers were frozen and the remaining layers fine-tuned, the model achieved the highest validation accuracy of 87.6%.
+
+* Freezing 50% of the layers resulted in a slight drop, with a validation accuracy of 86.85%.
+
+* With 80% of the layers frozen, the validation accuracy further declined to 85.20%.
+
+These results indicate that freezing fewer layers and allowing more of the network to adapt to the iNaturalist dataset leads to better performance. This is expected, as deeper layers tend to capture more task-specific features and benefit more from fine-tuning on the target dataset.
+
+
