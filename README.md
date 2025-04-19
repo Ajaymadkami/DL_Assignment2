@@ -61,4 +61,4 @@ Test Loss: 1.8902
 I evaluated the best-performing model—based on validation accuracy—on the test dataset to assess its generalization performance. The final test accuracy achieved by this model was 34.17%.
 
 
-DA6401_DL_Assignment2_Part_B
+# DA6401_DL_Assignment2_Part_B
