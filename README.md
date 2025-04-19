@@ -1,4 +1,4 @@
-# DA6401_DL_Assignment2_Part_A
+# DA6401_DL_Assignment2_Part_A : Training from scratch
 # Overview :
 This project focuses on building and experimenting with a Convolutional Neural Network (CNN) for image classification using a subset of the iNaturalist dataset. As part of the assignment, the goal is to design a lightweight yet modular CNN model tailored for a 10-class classification task.
 
