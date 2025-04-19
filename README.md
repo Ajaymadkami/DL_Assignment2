@@ -84,4 +84,43 @@ As part of the model fine-tuning process, I investigated the impact of freezing 
 
 These results indicate that freezing fewer layers and allowing more of the network to adapt to the iNaturalist dataset leads to better performance. This is expected, as deeper layers tend to capture more task-specific features and benefit more from fine-tuning on the target dataset.
 
+## How to Run the Code :
 
+
+## Requirements
+
+Before running the training code, install the following dependencies:
+
+### Recommended Python Version
+- Python 3.8 or above
+
+### Required Python Libraries
+```txt
+torch>=2.0.0
+torchvision
+numpy
+matplotlib
+scikit-learn
+Pillow
+wandb
+```
+To run the model training from the terminal using `train.py`, use the following command structure:
+
+```bash
+python train.py \
+  --train_path "<path_to_training_data>" \
+  --val_path "<path_to_validation_data>" \
+  --num_filter 32 64 128 256 512 \
+  --filter_size 3 \
+  --stride 1 \
+  --padding 1 \
+  --pool_size 2 \
+  --fc_size 256 \
+  --dropout 0.2 \
+  --batch_norm Yes \
+  --batch_size 64 \
+  --lr 0.0001 \
+  --epochs 10 \
+  --data_aug Yes \
+  --activation Mish
+```
